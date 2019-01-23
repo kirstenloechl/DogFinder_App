@@ -12,9 +12,11 @@
 		E9F0AC2721F8F354008796FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC2521F8F354008796FD /* Main.storyboard */; };
 		E9F0AC2921F8F355008796FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC2821F8F355008796FD /* Assets.xcassets */; };
 		E9F0AC2C21F8F355008796FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC2A21F8F355008796FD /* LaunchScreen.storyboard */; };
+		FB60AF8E547E8F51170B0E35 /* Pods_DogFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A348529BA5F163AEFA8B87F1 /* Pods-DogFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder.release.xcconfig"; sourceTree = "<group>"; };
 		E9F0AC1E21F8F354008796FD /* DogFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F0AC2121F8F354008796FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F0AC2321F8F354008796FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		E9F0AC2821F8F355008796FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F0AC2B21F8F355008796FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9F0AC2D21F8F355008796FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB60AF8E547E8F51170B0E35 /* Pods_DogFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A17B355EB2BDD26A92094FBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDF5801AFCAA650EF2623FBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */,
+				A348529BA5F163AEFA8B87F1 /* Pods-DogFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E9F0AC1521F8F354008796FD = {
 			isa = PBXGroup;
 			children = (
 				E9F0AC2021F8F354008796FD /* DogFinder */,
 				E9F0AC1F21F8F354008796FD /* Products */,
+				BDF5801AFCAA650EF2623FBD /* Pods */,
+				A17B355EB2BDD26A92094FBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9F0AC3021F8F355008796FD /* Build configuration list for PBXNativeTarget "DogFinder" */;
 			buildPhases = (
+				663D3544096D511172B3F484 /* [CP] Check Pods Manifest.lock */,
 				E9F0AC1A21F8F354008796FD /* Sources */,
 				E9F0AC1B21F8F354008796FD /* Frameworks */,
 				E9F0AC1C21F8F354008796FD /* Resources */,
+				BFD69E92057FB6EA7B4D11D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		663D3544096D511172B3F484 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DogFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD69E92057FB6EA7B4D11D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9F0AC1A21F8F354008796FD /* Sources */ = {
@@ -278,6 +347,7 @@
 		};
 		E9F0AC3121F8F355008796FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +366,7 @@
 		};
 		E9F0AC3221F8F355008796FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A348529BA5F163AEFA8B87F1 /* Pods-DogFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
