@@ -8,5 +8,6 @@ target 'DogFinder' do
   # Pods for DogFinder
   
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Auth'
 
 end
