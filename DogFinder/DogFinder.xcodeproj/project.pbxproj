@@ -24,6 +24,7 @@
 		E9F0AC2821F8F355008796FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F0AC2B21F8F355008796FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9F0AC2D21F8F355008796FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F0AC3321F97F3C008796FD /* DogFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DogFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +85,7 @@
 				E9F0AC2821F8F355008796FD /* Assets.xcassets */,
 				E9F0AC2A21F8F355008796FD /* LaunchScreen.storyboard */,
 				E9F0AC2D21F8F355008796FD /* Info.plist */,
+				E9F0AC3321F97F3C008796FD /* DogFinder-Bridging-Header.h */,
 			);
 			path = DogFinder;
 			sourceTree = "<group>";
@@ -122,6 +124,7 @@
 				TargetAttributes = {
 					E9F0AC1D21F8F354008796FD = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -350,6 +353,7 @@
 			baseConfigurationReference = F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD42J8PC5Z;
 				INFOPLIST_FILE = DogFinder/Info.plist;
@@ -357,8 +361,21 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xcode.DogFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DogFinder/DogFinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,6 +386,7 @@
 			baseConfigurationReference = A348529BA5F163AEFA8B87F1 /* Pods-DogFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD42J8PC5Z;
 				INFOPLIST_FILE = DogFinder/Info.plist;
@@ -376,8 +394,20 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xcode.DogFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DogFinder/DogFinder-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

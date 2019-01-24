@@ -9,9 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let loginbutton : FBSDKLoginButton = {
+        let button = FBSDKLoginButton()
+        button.readPermissions = ["email"]
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(loginbutton)
+        loginbutton.center = view.center
         // Do any additional setup after loading the view, typically from a nib.
     }
 
