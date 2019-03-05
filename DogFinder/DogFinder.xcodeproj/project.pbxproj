@@ -13,6 +13,10 @@
 		E9F0AC2921F8F355008796FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC2821F8F355008796FD /* Assets.xcassets */; };
 		E9F0AC2C21F8F355008796FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC2A21F8F355008796FD /* LaunchScreen.storyboard */; };
 		E9F0AC3821F9A9EF008796FD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC3721F9A9EF008796FD /* logo.png */; };
+		E9F0AC3C21FAB0EF008796FD /* DFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0AC3B21FAB0EF008796FD /* DFLoginViewController.swift */; };
+		E9F0AC3E21FAB882008796FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9F0AC3D21FAB882008796FD /* GoogleService-Info.plist */; };
+		E9F0AC4021FABF5C008796FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0AC3F21FABF5C008796FD /* LoginViewController.swift */; };
+		E9F0AC4221FAC552008796FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0AC4121FAC550008796FD /* HomeViewController.swift */; };
 		FB60AF8E547E8F51170B0E35 /* Pods_DogFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		E9F0AC2D21F8F355008796FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F0AC3321F97F3C008796FD /* DogFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DogFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9F0AC3721F9A9EF008796FD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		E9F0AC3B21FAB0EF008796FD /* DFLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFLoginViewController.swift; sourceTree = "<group>"; };
+		E9F0AC3D21FAB882008796FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9F0AC3F21FABF5C008796FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9F0AC4121FAC550008796FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F152F0A067C212C10D34DC30 /* Pods_DogFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2506ACB5A321897D1DC3A66 /* Pods-DogFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogFinder/Pods-DogFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,11 +91,15 @@
 			children = (
 				E9F0AC2121F8F354008796FD /* AppDelegate.swift */,
 				E9F0AC2321F8F354008796FD /* ViewController.swift */,
+				E9F0AC4121FAC550008796FD /* HomeViewController.swift */,
+				E9F0AC3B21FAB0EF008796FD /* DFLoginViewController.swift */,
+				E9F0AC3F21FABF5C008796FD /* LoginViewController.swift */,
 				E9F0AC2521F8F354008796FD /* Main.storyboard */,
 				E9F0AC3721F9A9EF008796FD /* logo.png */,
 				E9F0AC2821F8F355008796FD /* Assets.xcassets */,
 				E9F0AC2A21F8F355008796FD /* LaunchScreen.storyboard */,
 				E9F0AC2D21F8F355008796FD /* Info.plist */,
+				E9F0AC3D21FAB882008796FD /* GoogleService-Info.plist */,
 				E9F0AC3321F97F3C008796FD /* DogFinder-Bridging-Header.h */,
 			);
 			path = DogFinder;
@@ -156,6 +168,7 @@
 			files = (
 				E9F0AC2C21F8F355008796FD /* LaunchScreen.storyboard in Resources */,
 				E9F0AC2921F8F355008796FD /* Assets.xcassets in Resources */,
+				E9F0AC3E21FAB882008796FD /* GoogleService-Info.plist in Resources */,
 				E9F0AC2721F8F354008796FD /* Main.storyboard in Resources */,
 				E9F0AC3821F9A9EF008796FD /* logo.png in Resources */,
 			);
@@ -194,6 +207,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -202,6 +216,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -215,6 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F0AC4221FAC552008796FD /* HomeViewController.swift in Sources */,
+				E9F0AC4021FABF5C008796FD /* LoginViewController.swift in Sources */,
+				E9F0AC3C21FAB0EF008796FD /* DFLoginViewController.swift in Sources */,
 				E9F0AC2421F8F354008796FD /* ViewController.swift in Sources */,
 				E9F0AC2221F8F354008796FD /* AppDelegate.swift in Sources */,
 			);

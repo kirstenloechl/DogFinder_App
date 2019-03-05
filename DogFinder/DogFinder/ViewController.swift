@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
+    
     
     let loginbutton : FBSDKLoginButton = {
         let button = FBSDKLoginButton()
         button.readPermissions = ["email"]
         return button
     }()
+    
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
